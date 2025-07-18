@@ -1,0 +1,18 @@
+name: Enforce Branch Naming
+
+on:
+  push:
+    branches-ignore:
+      - main
+      - master
+
+jobs:
+  check-branch-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check branch name
+        run: |
+          if [[ ! "${GITHUB_REF##*/}" =~ ^BG-[0-9]+$ ]]; then
+            echo "Branch name must match BG-<number> (e.g., BG-101)."
+            exit 1
+          fi
