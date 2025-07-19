@@ -1,0 +1,13 @@
+name: boardgen-env
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - pip
+  - pip:
+      - requests
+      - beautifulsoup4
