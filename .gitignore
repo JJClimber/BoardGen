@@ -1,0 +1,14 @@
+# Ignore .gitattributes file
+.gitattributes
+
+# Typical Node, Python, and VS Code ignores
+node_modules/
+__pycache__/
+*.pyc
+.env
+.vscode/
+.DS_Store
+*.log
+
+# Ignore OS-specific files
+Thumbs.db
