@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Check branch name
         run: |
-          if [[ ! "${GITHUB_REF##*/}" =~ ^BG-[0-9]+$ ]]; then
-            echo "Branch name must match BG-<number> (e.g., BG-101)."
+          if [[ ! "${GITHUB_REF##*/}" =~ ^BG-[0-9]+.*]]; then
+            echo "Branch name must match BG-<number> (e.g., BG-101) and anything after."
             exit 1
           fi
